@@ -13,7 +13,7 @@
 /.vscode/
 /webgl/
 /GameMac.app/
-
+*.meta
 *.zip
 webgl_sharing
 # MemoryCaptures can get excessive in size.
