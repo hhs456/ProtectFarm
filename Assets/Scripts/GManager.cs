@@ -18,6 +18,8 @@ public class GManager : MonoBehaviour {
     public float score;
     float count = 0;
     public Text scoreText;
+    public AudioSource hitEnermy;
+    public AudioSource hitItem;
     public int BulletNum;
     public int MaxBullet;
     public int Hp = 15;

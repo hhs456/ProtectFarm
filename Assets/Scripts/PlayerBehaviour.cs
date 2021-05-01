@@ -45,6 +45,7 @@ public class PlayerBehaviour : MonoBehaviour {
         if (!isItemUsed) {
             if (Input.GetKeyDown(KeyCode.Space) && isReadyToShoot) {
                 if (A.BulletNum > 0) {
+                    GetComponent<AudioSource>().Play();
                     A.bulletbonus = 1.0f;
                     A.BulletNum--;
                     Blt.text = A.BulletNum + "/" + A.MaxBullet;
@@ -71,6 +72,7 @@ public class PlayerBehaviour : MonoBehaviour {
             if (Input.GetKey(KeyCode.Space)) {
                 count += Time.deltaTime;
                 if (count >= targetTime) {
+                    GetComponent<AudioSource>().Play();
                     if (A.BulletNum > 0) {
                         A.bulletbonus = 1.0f;
                         A.BulletNum--;

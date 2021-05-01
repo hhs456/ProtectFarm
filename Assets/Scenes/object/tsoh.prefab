@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6125690002438710551}
   - component: {fileID: 1201805054494264861}
   - component: {fileID: -3664622640955479084}
+  - component: {fileID: -5205991878984731084}
   m_Layer: 0
   m_Name: tsoh
   m_TagString: enemy
@@ -50,7 +51,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   Bullet: {fileID: 9140899707420922602, guid: 90cf795957e46f6499d8c4e4481ca4ee, type: 3}
+  ItemNum: 0
   targettime: 4
   score: 20
   isbee: 0
@@ -153,3 +154,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   g: {fileID: 0}
+--- !u!95 &-5205991878984731084
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919039765234136243}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2c40df7605bd2041ae4c7f32ce5b582, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

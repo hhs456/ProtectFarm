@@ -33,4 +33,8 @@ public class EnemyMove : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+
+    public void UnitDie() {
+        Destroy(gameObject);
+    }
 }

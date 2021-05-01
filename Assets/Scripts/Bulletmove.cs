@@ -5,9 +5,13 @@ using UnityEngine;
 public class Bulletmove : MonoBehaviour {
     public float speed;
     public GManager A;
+    public AudioSource hitEnermy;
+    public AudioSource hitItem;
     int x = 0;
     private void Start() {
         A = GetComponent<GetGameManager>().Get();
+        hitEnermy = A.hitEnermy;
+        hitItem = A.hitItem;
         this.transform.localScale = A.Tomruulah;
     }
     void FixedUpdate() {
@@ -42,16 +46,24 @@ public class Bulletmove : MonoBehaviour {
                     if (enemyMove.ItemNum == 0) {
                         x++;
                         A.Hit(enemyMove.score, x);
+                        hitEnermy.Play();
+                        other.gameObject.GetComponent<Animator>().Play("Destory");
+                        other.gameObject.GetComponent<Collider2D>().enabled = false;
                     }
-                    else
+                    else {
                         A.GetItem(enemyMove.ItemNum);
-                    Destroy(other.gameObject);
+                        hitItem.Play();
+                        Destroy(other.gameObject);
+                    }
+
                 }
                 break;
             case "bee":
                 if (speed > 0) {
                     A.Hit(enemyMove.score, x);
-                    Destroy(other.gameObject);
+                    hitEnermy.Play();
+                    other.gameObject.GetComponent<Animator>().Play("Destory");
+                    other.gameObject.GetComponent<Collider2D>().enabled = false;
                     //A.HpChange(-1);
                     A.gameTime += 10;
                 }
